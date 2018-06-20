@@ -7,6 +7,9 @@ categories: jekyll update
 <html>
   <body>
     <div>
+      <img scr="C:\Users\POISONOUS\Documents\GitHub\poisonouschimp.github.io\Turbo.jpg">
+    </div>
+    <div>
 "I want to link my code notes here <a href="poisonouschimp.github.io/code_notes.txt">This is my link</a>
 
 If the link doesn't work here are my notes:
