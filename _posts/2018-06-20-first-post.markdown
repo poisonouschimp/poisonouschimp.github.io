@@ -1,8 +1,9 @@
+---
 layout: post
 title:  "My first post"
 date:   2018-06-20 11:47:22 +0000
 categories: jekyll update
-
+---
 I want to link my code notes here <a href="/code_notes.txt">This is my link</a>
 
 If the link doesn't work here are my notes:
