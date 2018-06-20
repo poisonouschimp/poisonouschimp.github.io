@@ -4,7 +4,9 @@ title:  "My first post"
 date:   2018-06-20 11:47:22 +0000
 categories: jekyll update
 ---
-'
+<html>
+  <body>
+    <div>
 "I want to link my code notes here <a href="poisonouschimp.github.io/code_notes.txt">This is my link</a>
 
 If the link doesn't work here are my notes:
@@ -429,4 +431,6 @@ Website in /home/ccuser/workspace/daw/personal-website
 Created the required GitHub repo
 Used Git to add, commit, and push your website to the repo
 Succesfully used GitHub Pages to deploy your site to the Internet!"
-'
+    </div>
+  </body>
+</html>
