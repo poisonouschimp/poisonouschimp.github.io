@@ -5,13 +5,8 @@ date:   2018-06-20 11:47:22 +0000
 categories: jekyll update
 ---
 ![Turbo](https://github.com/poisonouschimp/poisonouschimp.github.io/blob/master/Turbo.jpg?raw=true)
-<html>
-  <body>
-    <div>
-      <img scr="C:\Users\POISONOUS\Documents\GitHub\poisonouschimp.github.io\Turbo.jpg">
-    </div>
-    <div>
-"I want to link my code notes here <a href="poisonouschimp.github.io/code_notes.txt">This is my link</a>
+
+"I want to link my code notes here <a href="poisonouschimp.github.io/code notes.txt">This is my link</a>
 
 If the link doesn't work here are my notes:
 <p>All HTML elements created using tags-https://developer.mozilla.org/en-US/docs/Web/HTML/Element
