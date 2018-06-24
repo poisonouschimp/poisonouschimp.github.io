@@ -10,8 +10,8 @@ title: POISONOUS CHIMP'S FIRST SITE!
 email: JOINHALO@GMAIL.com
 description: > # this means to ignore newlines until "baseurl:"
   This is my first attempt at designing a working website. I intend to make it a great site eventually!
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+baseurl: "/Users/POISONOUS/Website/poisonouschimp.github.io" # the subpath of your site, e.g. /blog
+url: "https://poisonouschimp.github.io/" # the base hostname & protocol for your site
 twitter_username: POISONOUSCHIMP
 github_username:  POISONOUSCHIMP
 
