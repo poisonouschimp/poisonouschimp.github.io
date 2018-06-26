@@ -46,7 +46,7 @@ HTML site standards:
 <a> - anchor element that links to a web page
 <a href="https://www.link.com/">This is a link to link.com</a>
 href- hyperlink reference used to path to other webpages.
-_target="_blank" - lets the link open a new window or tab, add after the URL in the <a> tag
+target="_blank" - lets the link open a new window or tab, add after the URL in the <a> tag
 local files use relative path of ./index.html vs absolute path of https://..... and ./ tells browser to look in the current folder
 You can wrap any element in anchor tags<a></a> to make them link
 <p id="top">targets top of page</p>
