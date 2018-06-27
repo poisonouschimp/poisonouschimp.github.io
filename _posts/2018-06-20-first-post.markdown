@@ -6,7 +6,7 @@ categories: jekyll update
 ---
 ![Turbo](https://github.com/poisonouschimp/poisonouschimp.github.io/blob/master/Turbo.jpg?raw=true)
 
-"I want to Link my code notes here [This is my link](../blob/master/notes)
+"I want to Link my code notes here [This is my link](https://raw.githubusercontent.com/poisonouschimp/poisonouschimp.github.io/master/notes.txt)
 
 If the link doesn't work here are my notes:
 
