@@ -6,10 +6,12 @@ categories: jekyll update
 ---
 ![Turbo](https://github.com/poisonouschimp/poisonouschimp.github.io/blob/master/Turbo.jpg?raw=true)
 
-"I want to Link my code notes here <a href="C:\Users\POISONOUS\Website\poisonouschimp.github.io\code notes.txt">This is my link</a>
+"I want to Link my code notes here [This is my link](../blob/master/notes)
 
 If the link doesn't work here are my notes:
-<p>"All HTML elements created using tags-https://developer.mozilla.org/en-US/docs/Web/HTML/Element
+
+
+```All HTML elements created using tags-https://developer.mozilla.org/en-US/docs/Web/HTML/Element
 Global Attributes-https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes
 
 <body> --opens display content
@@ -429,4 +431,5 @@ Jekyll's defaults:
 Website in /home/ccuser/workspace/daw/personal-website
 Created the required GitHub repo
 Used Git to add, commit, and push your website to the repo
-Succesfully used GitHub Pages to deploy your site to the Internet!"</p>
+Succesfully used GitHub Pages to deploy your site to the Internet!
+
