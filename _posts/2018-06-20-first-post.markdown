@@ -431,5 +431,5 @@ Jekyll's defaults:
 Website in /home/ccuser/workspace/daw/personal-website
 Created the required GitHub repo
 Used Git to add, commit, and push your website to the repo
-Succesfully used GitHub Pages to deploy your site to the Internet!
+Succesfully used GitHub Pages to deploy your site to the Internet!```
 
