@@ -12,8 +12,7 @@ If the link doesn't work here are my notes:
 
 
 <dl>
-  <dt>Definition list</dt>
-  <dd>All HTML elements created using tags-https://developer.mozilla.org/en-US/docs/Web/HTML/Element
+  All HTML elements created using tags-https://developer.mozilla.org/en-US/docs/Web/HTML/Element
 Global Attributes-https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes
 
 <body> --opens display content
@@ -433,5 +432,6 @@ Jekyll's defaults:
 Website in /home/ccuser/workspace/daw/personal-website
 Created the required GitHub repo
 Used Git to add, commit, and push your website to the repo
-Succesfully used GitHub Pages to deploy your site to the Internet!</dd>
+Succesfully used GitHub Pages to deploy your site to the Internet!
+  
 </dl>
