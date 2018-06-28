@@ -23,12 +23,11 @@ $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
 // Width of the content area
-$content-width:    1000px;
+$content-width:    800px;
 $flex-wrap: wrap;
-$display: flex;
 $word-break: keep-all;
 $word-wrap: normal;
-$overflow: visible;
+$overflow: auto;
 $white-space: pre-line;
 
 $on-palm:          600px;
