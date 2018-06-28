@@ -11,7 +11,7 @@ categories: jekyll update
 If the link doesn't work here are my notes:
 
 ```text 
-<pre>
+
 All HTML elements created using tags-https://developer.mozilla.org/en-US/docs/Web/HTML/Element
 Global Attributes-https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes
 
@@ -433,5 +433,5 @@ Website in /home/ccuser/workspace/daw/personal-website
 Created the required GitHub repo
 Used Git to add, commit, and push your website to the repo
 Succesfully used GitHub Pages to deploy your site to the Internet!
-</pre>
+
 ```
