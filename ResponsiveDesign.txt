@@ -1,0 +1,10 @@
+CSS uses media queries to adapt a website's content to different screen sizes. CSS detects and applies different CSS styles depending on the width of the screen. 
+
+@media only screen and (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+}
+@media- begins a media query rule and instructs CSS compiler how to parse the rest of the rule.
+only screen- indicates what type of devices should use this rule. 
+and (max-width : 480px)- media feature, instructs CSS to apply the CSS styles to devices with a width of 480px or smaller. Media features must be met to render the CSS within a media query.
