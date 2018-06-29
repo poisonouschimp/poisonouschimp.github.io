@@ -6,6 +6,7 @@ body {
   font-size: 18px;
   line-height: 1.4em;
   color: GhostWhite;
+  text-shadow: 0 0 3px green, 0 0 50px black;
 }
 
 body {
