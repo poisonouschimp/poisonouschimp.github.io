@@ -8,3 +8,23 @@ CSS uses media queries to adapt a website's content to different screen sizes. C
 @media- begins a media query rule and instructs CSS compiler how to parse the rest of the rule.
 only screen- indicates what type of devices should use this rule. 
 and (max-width : 480px)- media feature, instructs CSS to apply the CSS styles to devices with a width of 480px or smaller. Media features must be met to render the CSS within a media query.
+The CSS rule for font-size: 12px is then used only when the above rule is met. 
+
+A range can be set for screen size by and (min-width: 320px) and (max-width: 480px), or you can write as 2 separate lines with separate rules. 
+
+@media only screen and (min-resolution: 300dpi) {
+    /* CSS for high resolution screens */
+}
+
+You can chain multiple features with the and statment, you can chain the resolution and screen size together in one statement. 
+
+If you only need one statement to be valid in the feature selection you can separate them by (,) which acts like an "or" statement.
+@media only screen and (min-width: 480px), (orientation: landscape) {
+    /* CSS ruleset */
+}
+
+Breakpoints: size where webpage does not appear correctly. For targeting tablets in landscape we use: 
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    /* CSS ruleset */
+}
+--rather than set breakpoints for every device you can resize the browser until it naturally breaks based on content, the dimensions where the content breaks or looks odd is the media query break points. https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/screen-sizes.png
