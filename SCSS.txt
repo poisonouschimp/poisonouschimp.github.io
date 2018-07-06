@@ -220,19 +220,182 @@ modulo %.
 Note: Modulo, or %, is the remainder in a given division, so "9%2" would be "1".
 You can do math with SASS colors to mix them. Requires compatable units, so you can't multiply px with ems. 
 
+width: $variable/6; //division
+line-height: (600px)/9; //division
+margin-left: 20-10 px/ 2; //division
+font-size: 10px/8px; //not division
 
+Each loops in Sass iterate on each of the values on a list. The syntax is as follows: 
+@each $item in $list {
+  //some rules and or conditions
+}
 
+EX: @each $item in $list {
+  .#{$item} {
+    background: $item;
+  }
+}
+in CSS:
+.orange {
+  background: orange;
+}
 
+.purple {
+  background: purple;
+}
 
+.teal {
+  background: teal;
+}
 
+For loops in Sass can be used to style numerous elements or assigning properties all at once. They work like any for-loop you've seen before.
 
+Sass's for loop syntax is as follows:
+@for $i from $begin through $end {
+   //some rules and or conditions
+}
+$i is just a variable for the index, or position of the element in the list
+$begin and $end are placeholders for the start and end points of the loop.
+The keywords through and to are interchangeable in Sass
+Rainbow example:
+@for $i from 1 through $total {
+  .ray:nth-child(#{$i}) {
+    background: blue;
+    background: adjust-hue(blue, $i * $step);
+   }
 
+In Sass, if() is a function that can only branch one of two ways based on a condition. You can use it inline, to assign the value of a property: width: if( $condition, $value-if-true, $value-if-false);
 
+For cases with more than two outcomes, the @if, @else-if, and @else directives allow for more flexibility.
 
+@mixin deck($suit) {
+ @if($suit == hearts || $suit == spades){
+   color: blue;
+ }
+ @else-if($suit == clovers || $suit == diamonds){
+   color: red;
+ }
+ @else{
+   //some rule
+ }
+}
+The mixin above is a good example for how we would want to handle the coloring of a deck of cards based on a suit condition.
 
+Sass extends the existing CSS @import rule to allow including other SCSS and Sass files. Typically, all imported SCSS files are imported into a main SCSS file which is then combined to make a single CSS output file.The main/global SCSS file has access to any variables or mixins defined in its imported files. The `@import command takes a filename to import.
 
+By default, @import looks for a Sass file in the same or otherwise specified directory but there are a few circumstances where it will behave just like a CSS @import rule:
+If the file’s extension is .css.
+If the filename begins with http://.
+If the filename is a url().
+If the @import has any media queries.
 
+Partials in Sass are the files you split up to organize specific functionality in the codebase. They use a _ prefix notation in the file name that tells Sass to hold off on compiling the file individually and instead import it. _filename.scss
+To import this partial into the main file - or the file that encapsulates the important rules and the bulk of the project styles - omit the underscore.
 
+For example, to import a file named _variables.scss, add the following line of code:  @import "variables";
+The global file imports all the components and centralizes the logic. 
+
+A reminder that helper refers to resources like variables, mixins, functions, etc. These are the elements that "help" make up the foundation of your codebase as it grows.
+
+Sass's @extend. All we have to do is make our strawberry class extend .lemonade
+.lemonade {
+  border: 1px yellow;
+  background-color: #fdd;
+}
+.strawberry {
+  @extend .lemonade;
+  border-color: pink;
+}
+If you observe CSS output, you can see how @extend is working to apply the .lemonade rules to .strawberry:
+.lemonade, .strawberry {
+  border: 1px yellow;
+  background-color: #fdd;
+}
+
+.strawberry {
+  @extend .lemonade;
+  border-color: pink;
+}
+If we think of .lemonade as the extendee, and of .strawberry as the extender, we can then think of Sass appending the extender selector to the rule declarations in the extendee definition.
+
+Sometimes, you may create classes solely for the purpose of extending them and never actually use them inside your HTML.
+
+Sass anticipated this and allows for a special type of selector called a placeholder, which behaves just like a class or id selector, but use the % notation instead of # or .
+
+Placeholders prevent rules from being rendered to CSS on their own and only become active once they are extended anywhere an id or class could be extended.
+a%drink {
+    font-size: 2em;
+    background-color: $lemon-yellow;
+ }
+
+ .lemonade {
+  @extend %drink;
+  //more rules
+ }
+Translates to 
+a.lemonade {
+    font-size: 2em;
+    background-color: $lemon-yellow;
+ }
+
+.lemonade {
+  //more rules
+}
+
+Mixins, unlike extended selectors, insert the code inside the selector's rules wherever they are included, only including "original" code if they are assigning a new value to the rule's properties via an argument.
+
+@mixin no-variable {
+  font-size: 12px;
+  color: #FFF;
+  opacity: .9;
+}
+
+%placeholder {
+  font-size: 12px;
+  color: #FFF;
+  opacity: .9;
+}
+
+span {
+  @extend %placeholder;
+}
+div {
+  @extend %placeholder;
+}
+
+p {
+  @include no-variable;
+}
+
+h1 {
+  @include no-variable;
+}
+would compile to:
+span, div{
+  font-size: 12px;
+  color: #FFF;
+  opacity: .9;
+}
+
+p {
+  font-size: 12px;
+  color: #FFF;
+  opacity: .9;
+  //rules specific to ps
+}
+
+h1 {
+  font-size: 12px;
+color: #FFF;
+  opacity: .9;
+  //rules specific to ps
+}
+
+As a general rule of thumb, you should
+
+Try to only create mixins that take in an argument, otherwise you should extend.
+
+Always look at your CSS output to make sure your extend is behaving as you intended.
 
 
 
