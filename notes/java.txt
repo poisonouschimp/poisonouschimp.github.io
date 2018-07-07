@@ -1,0 +1,83 @@
+int - 
+short for integer. From The int data type only allows values between -2,147,483,648 and 2,147,483,647.
+EX:
+public class DataTypesB {
+	public static void main(String[] args) {
+
+		System.out.println(Brian);
+
+	}
+}
+Will print out: Brian in the display
+
+boolean- 
+boolean is a data type that can only be either true or false.
+
+char- 
+The char data type is used to represent single characters. That includes the keys on a keyboard that are used to produce text. char is short for character and can represent a single character. All char values must be enclosed in single quotes, like this: 'G'.
+
+variable- 
+stores data (value) and must have a specified data type. Once the variable is defined it then stores the value as the type.
+EX: int myLuckyNumber = 7;
+The variable is muLuckyNumer and now stores a value 7 as an int type. 
+
+Whitespace-
+ is one or more characters (such as a space, tab, enter, or return) that do not produce a visible mark or text. Whitespace is often used to make code visually presentable.
+
+Single line comments-
+Single line comments are one line comments that begin with two forward slashes: // I'm a single line comment!
+
+Multi-line comments- multi-line comments are generally longer comments that can span multiple lines. They begin with /* and end with */ . Here's an example:
+/*
+
+Hello, 
+Java! 
+
+*/
+
+Java Math-
+add, subtract, multiply, and divide numbers and store them in variables like this:
+int sum = 34 + 113;
+int difference = 91 - 205;
+int product = 2 * 8; 
+int quotient = 45 / 3;
+
+modulo operator - 
+represented in Java by the % symbol - returns the remainder of dividing two numbers. For example, 15 % 6 will return the value of 3, because that is the remainder left over after dividing 15 by 6. Or another way of saying it is 15/6 = 6+6 = 12, 15-12 = 3 which is the remainder since no other whole numbers can go into 15. 3/6 = 0.5, so 15/6 = 2.5 on the calculator, but for modulo operator it is finding what int is left after putting all the whole numbers in, before doing the fractions. It finds the numerator for the fraction. 
+
+Relational operators-
+Relational operators compare data types that have a defined ordering, like numbers (since numbers are either smaller or larger than other numbers).Relational operators will always return a boolean value of true or false.
+< : less than.
+<=: less than or equal to.
+>: greater than.
+>=: greater than or equal to.
+A relational operator is placed between the two operands (the terms that you want to compare using the relational operator). The result of a relational operation is printed out in the following statement:
+System.out.println(5 < 7);
+The example above will print out true because the statement "5 is less than 7" is true.
+
+The equality operators are:
+==: equal to.
+!=: not equal to.
+Equality operators do not require that operands share the same ordering. For example, you can test equality across boolean, char, or int data types. The example below combines assigning variables and using an equality operator:
+char myChar = 'A';
+int myInt = -2;
+System.out.println(myChar == myInt);
+The example above will print out false because the value of myChar ('A') is not the same value as myInt ('-2').
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
