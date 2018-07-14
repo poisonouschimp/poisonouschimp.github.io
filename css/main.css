@@ -67,10 +67,10 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: #2a7ae2;
+  color: white;
   text-decoration: none; }
   a:visited {
-    color: #1756a9; }
+    color: white; }
   a:hover {
     color: #111;
     text-decoration: underline; }
@@ -162,7 +162,7 @@ pre {
   margin-bottom: 0;
   float: left; }
   .site-title, .site-title:visited {
-    color: #424242; }
+    color: white; }
 
 .site-nav {
   float: right;

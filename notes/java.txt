@@ -64,10 +64,295 @@ int myInt = -2;
 System.out.println(myChar == myInt);
 The example above will print out false because the value of myChar ('A') is not the same value as myInt ('-2').
 
+Boolean operators
+1. the and operator represented in Java by &&, where it returns a boolean value of true only when the expressions on both sides of && are true. 
+2. the or operator represented in Java by || returns a value of true when at least one expression on either side of || is true. 
+3. the not operator represented in Java by !, will return the opposite of the expression immediately after it. It will return false if the expression is true and true if the expression in false. !true = false and !false = true.
+--Boolean operator order of operations:
+--! is evaluated first, && evaluated second, || is evaluated third.
+--Expressions in parentheses is evaluated first and read left to right. 
 
+if statements:
+1. in Java the keyword if is the first part of a conditional expression. It is followed by a boolean expression and then a block of code. If the Boolean expression evaluates to true, the block of code that follows will be run. 
+Ex:
+if (9 > 2) {
+    System.out.println("Control flow rocks!");
+}
+--9>2 is the boolean expression that gets checked. Since the expression is true, control flow rocks will be printed to the console. The if statement is not followed by a semicolon; instead it uses curly braces {} to surround a block of code that runs when true and the boolean expression in (). 
+2. if/else- conditional will run the block of code associated with the if statement if its boolean expression evaluates to true. Otherwise the boolean expression evaluates to false it will run the block of code after the else keyword. 
+ex: 
+if (1 < 3 && 5 < 4) {
+    System.out.println("I defy the Boolean laws!")
+} else {
+    System.out.println("You can thank George Boole!");
+}
+in the example since 1<3 (true) && (and) 5<4(false) returns as false, the else statement is run.
 
+if/else if/else statement-
+if the boolean expression after the if statement is true, it will run the block that directly follows. Otherwise the boolean expression after the else if statement evaluates to true then that code block will run. Finally if all previous boolean expressions evaluate to false the else statment will run. 
+ex:
+int shoeSize = 10;
 
+if (shoeSize > 12) {
+    System.out.println("Sorry, your shoe size is currently not in stock.");
+} else if (shoeSize >= 6) {
+    System.out.println("Your shoe size is in stock!");
+} else {
+    System.out.println("Sorry, this store does not carry shoes smaller than a size 6.");
+}
 
+Ternary Conditional- 3 part statements.
+1. A boolean expression
+2. A single statement that gets executed if the boolean expression is true
+3. A single statement that gets executed if the boolean is false. 
+EX: 
+int pointsScored = 21;
+
+char gameResult = (pointsScored > 20) ? 'W' : 'L';
+System.out.println(gameResult);
+
+The int is assigned pointsScored as 21, gameResult then says 21>20 which is true. This returns the value of W printed to console. If it was false it would have returned L
+
+Switch statments- 
+int restaurantRating = 3;
+
+switch (restaurantRating) {
+
+    case 1: System.out.println("This restaurant is not my favorite.");
+      break;
+
+    case 2: System.out.println("This restaurant is good.");
+      break;
+
+    case 3: System.out.println("This restaurant is fantastic!");
+      break;
+	
+	default: System.out.println("I've never dined at this restaurant.");
+      break;
+}
+
+The int of 3 will print out "This restaurant is fantastic!" The break statement will exit the switch statement after a condition is met. Without the break statement, Java will continue to check whether the value of restaurantRating matches any other cases. The default case is printed only if it is not equal to an int with the value of 1/2/3. 
+
+Object orientated programming in Java-
+can design classes, objects, and methods that can perform certain actions.
+
+Classes- A class is a set of instructions that describe how a data structure should behave.
+//Create a custom Car class
+
+class Car {
+
+} -- creates a custom class called car.
+
+Class constructor- Allows us to create instances of the class. We can set info for the class. 
+
+class Car {
+
+    //The class constructor for the Car class
+    public Car() {
+
+    }
+}
+
+Instance variables- describes the details we might see associated with the class 
+class Car {
+
+    //Using instance variables to model our Car class after a real-life car
+    int modelYear;
+
+    public Car() {
+
+    }
+}
+
+Parameters- allow data types to be created with specified attributes. 
+class Car {
+
+    //Use instance variables to model our Car class after a real-life car
+    int modelYear;
+
+    public Car(int year) {
+
+        modelYear = year;
+    }
+}
+In the example above, we add the int parameter year to the Car constructor.The value of modelYear will equal the int value that is specified when we first use this class constructor.
+
+Main method- 
+public static void main(String[] args) {
+
+}
+This is Java's built-in main method. When Java runs the program, the code inside of the main method is executed. 
+
+Objects in Java- an instance of a class is known as an object in Java. 
+class Car {
+
+    int modelYear;
+
+    public Car(int year) {
+
+        modelYear = year;
+
+    }
+
+    public static void main(String[] args){
+
+        Car myFastCar = new Car(2007);
+
+    }
+}
+In the example we create a Car object named myFastCar. When creating myFastCar we used the class constructor and specified a value for the required int parameter year. 2007 is the model year of myFastCar. The new object is declared inside the main method. 
+
+Methods- A method is a pre-defined set of instructions. Methods are declared within a class. Java provides some pre-defined methods available to all classes, but we can create our own as well.
+
+class Car {
+
+    int modelYear;
+
+    public Car(int year) {
+
+        modelYear = year;
+
+    }
+
+    //Our new method to help us get "started"
+    public void startEngine() {
+
+        System.out.println("Vroom!");
+
+    }
+
+    public static void main(String[] args){
+
+        Car myFastCar = new Car(2007);
+
+    }
+}
+In the example above, we added a method called startEngine. When the method is used, it will print out Vroom! The startEngine method is created outside of the main method, like the constructor was.
+
+class Car {
+
+    int modelYear;
+
+    public Car(int year) {
+
+        modelYear = year;
+
+    }
+
+    public void startEngine() {
+
+        System.out.println("Vroom!");
+
+    }
+
+    public static void main(String[]  args){
+
+        Car myFastCar = new Car(2007);
+        myFastCar.startEngine();
+    }
+In the example above, we call the startEngine method on the myFastCar object. Again, this occurs inside of the main method. Running the program results in printing Vroom! to the console.
+
+class Car {
+
+    int modelYear;
+
+    public Car(int year) {
+
+        modelYear = year;
+
+    }
+
+    public void startEngine() {
+        System.out.println("Vroom!");
+    }
+
+    public void drive(int distanceInMiles) {
+
+        System.out.println("Miles driven: " + distanceInMiles);
+
+    }
+
+    public static void main(String[] args){
+
+        Car myFastCar = new Car(2007);
+        myFastCar.startEngine();
+        myFastCar.drive(1628);
+
+    }
+In the example above, we create a drive method that accepts an int parameter called distanceInMiles. In the main method, we call the drive method on the myFastCar object and provide an int parameter of 1628. Calling the drive method on myFastCar will result in printing Miles driven: 1628 to the console.
+
+Keyword Void- The void keyword indicates that no value should be returned by the method after it executes all the logic in the method. If we do want the method to return a value after it finishes running, we can specify the return type. The void keyword (which means "completely empty") indicates to the method that no value is returned after calling that method. Alternatively, we can use data type keywords (such as int, char, etc.) to specify that a method should return a value of that type.
+
+class Car {
+
+    int modelYear;
+
+    public Car(int year) {
+
+        modelYear = year;
+
+    }
+
+    public void startEngine() {
+
+        System.out.println("Vroom!");
+
+    }
+
+    public void drive(int distanceInMiles) {
+
+        System.out.println("Your car drove " + distanceInMiles + " miles!");
+
+    }
+
+    public int numberOfTires() {
+
+        return 4;
+
+    }
+
+    public static void main(String[] args){
+
+        Car myFastCar = new Car(2007)
+        myFastCar.startEngine();
+        myFastCar.drive(1628);
+
+        int tires = myFastCar.numberOfTires();
+        System.out.println(tires);
+
+    }
+}
+In the example above, we created the numberOfTires method. This method specifies that it will return an int data type. Inside of the method, we used the return keyword to return the value of 4 which is an int type. Within main, we called the numberOfTires method on myFastCar. Since the method returns an int value of 4, we store the value within an int variable called tires. We then print the value of tires to the console.
+
+class Car extends Vehicle {
+
+    int modelYear;
+
+    public Car(int year) {
+
+        modelYear = year;
+
+    }
+
+    //Other methods omitted for brevity...
+
+    public static void main(String[] args){
+
+        Car myFastCar = new Car(2007)
+        myFastCar.checkBatteryStatus();
+
+    }
+}
+
+class Vehicle {
+
+    public void checkBatteryStatus() {
+
+        System.out.println("The battery is fully charged and ready to go!");
+
+    }
+}
+In the example above, the extends keyword is used to indicate that the Car class inherits the behavior defined in the Vehicle class. This makes sense, since a car is a type of vehicle. Within the main method of Car, we call the checkBatteryStatus method on myFastCar. Since Car inherits from Vehicle, we can use methods defined in Vehicle on Car objects.
 
 
 
