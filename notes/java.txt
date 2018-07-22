@@ -354,6 +354,124 @@ class Vehicle {
 }
 In the example above, the extends keyword is used to indicate that the Car class inherits the behavior defined in the Vehicle class. This makes sense, since a car is a type of vehicle. Within the main method of Car, we call the checkBatteryStatus method on myFastCar. Since Car inherits from Vehicle, we can use methods defined in Vehicle on Car objects.
 
+Overview-
+Class: a blueprint for how a data structure should function
+
+Constructor: instructs the class to set up the initial state of an object
+
+Object: instance of a class that stores the state of a class
+
+Method: set of instructions that can be called on an object
+
+Parameter: values that can be specified when creating an object or calling a method
+
+Return value: specifies the data type that a method will return after it runs
+
+Inheritance: allows one class to use functionality defined in another class
+
+For loops- 
+for (int counter = 0; counter < 5; counter++) {
+
+    System.out.println("The counter value is: " + counter);
+
+}
+Control statements to run a task repeatedly. Runs a block of code repeatedly until specified conditions are met. 
+--The statements in the parentheses of the for loop is composed of:
+1. Initialization- the int variable named counter is initialized to the value of 0 before the loop is run.
+2. Test condition- the boolean expression "counter <5" is a conditional statement that is evaluated before the code inside the control statement is run every loop. If the expression is true the code in the block is run, otherwise if false the loop will stop.
+3. Increment- each time the loop completes the increment statement is run. The statement counter++ increases the value of the counter by 1 after each loop. Similar to the if-then statement, no semicolon is necessary. 
+
+Arraylist- stores a list of data of a specified type. A java pre-defined class. To use it we must create an ArrayList object. 
+ArrayList<Integer> quizGrades = new 
+ArrayList<Integer>();
+In the example we create an ArrayList object called quizGrades that will store data types belonging to the <Integer> class(whole numbers). 
+ArrayList<Integer> quizGrades = new ArrayList<Integer>();
+quizGrades.add(95);
+quizGrades.add(87);
+quizGrades.add(73);
+System.out.println( quizGrades.get(0) );
+
+The Arraylist is zero indexed meaning the first item is called by 0 and second is called by 1, etc. The System.out.println is the print to terminal command and the quizGrades.get(0) is the access command for the ArrayList index of whatever is stored in it. 
+
+quizGrades.add(0, 100); is an insert method. It says in postion 0 add grade of 100. As a result the rest of the items in the index are shifted one number higher to fit the addition. 
+
+for (int i = 0; i < quizGrades.size(); i++) {
+
+    System.out.println( quizGrades.get(i) );
+
+}
+The size method returns an int that represents how many total elements are stored within quizGrades. The example will print out each element within quizGrades in order. The process of going through each element in the ArrayList is called iteration.
+
+For each loops: 
+for (Integer grade : quizGrades){
+    System.out.println(grade);
+}
+In the example above, the colon (:) can be read as "in". The for each loop altogether can be read as "for each Integer element (called grade) in quizGrades, print out the value of grade." The loop will print out the value of each Integer element in quizGrades. Note: the for each loop does not require a counter.
+
+HashMap-
+HashMap<String, Integer> myFriends = new HashMap<String, Integer>();
+In the example above, we create a HashMap object called myFriends. The myFriends HashMap will store keys of String data types and values of type Integer. Note: the String object allows you to store multiple characters, such as a word in quotations (e.g. "Rats!").
+HashMap is like a dictionary where they key is the word that leads to the whole definition being found. 
+HashMap<String, Integer> myFriends = new HashMap<String, Integer>();
+
+myFriends.put("Mark", 24);
+myFriends.put("Cassandra", 25);
+myFriends.put("Zenas", 21);
+In the example above, we used the put method to add a String key and an associated Integer value. The String key is the text inside double quotes " ". The Integer value is represented by the number.
+To access data in an ArrayList, we specified the index. In order to access a value in a HashMap, we specify the key:
+HashMap<String, Integer> myFriends = new HashMap<String, Integer>();
+
+myFriends.put("Mark", 24);
+myFriends.put("Cassandra", 25);
+myFriends.put("Zenas", 21);
+
+System.out.println( myFriends.get("Zenas") );
+In the example above, we call the get method on the myFriends HashMap using the key "Zenas". The console will print the value associated with "Zenas" which is 21.
+
+HashMap<String, Integer> myFriends = new HashMap<String, Integer>();
+
+myFriends.put("Mark", 24);
+myFriends.put("Cassandra", 25);
+myFriends.put("Zenas", 21);
+
+System.out.println( myFriends.size() );
+
+for (String name: myFriends.keySet()) {
+
+    System.out.println(name + " is age: " + myFriends.get(name));
+
+}
+In the example above, the size method of HashMap prints out the size of the myFriends instance. As a result, the console prints out 3 since there are 3 key-value pairs.
+
+Next, we use a for each loop to iterate over each key in myFriends. The keySet method of HashMap returns a list of keys.
+
+Inside the loop, we access the current key name and use the get method of HashMap to access the value. The console will print out the names and ages of each of my friends.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
